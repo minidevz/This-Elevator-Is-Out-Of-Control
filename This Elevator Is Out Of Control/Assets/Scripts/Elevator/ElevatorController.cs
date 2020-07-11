@@ -7,7 +7,8 @@ public class ElevatorController : MonoBehaviour
 
     //Ibrahim Hisham, Copyright Minidevs. 2019
     #region Variables
-    private bool onElevator;
+    [HideInInspector]
+    public bool onElevator;
     public float speed;
     private Vector3 startLevel;
     private Vector3 currentLevel;
@@ -24,8 +25,12 @@ public class ElevatorController : MonoBehaviour
     {
         if(onElevator == true)
         {
-         elevator.Translate(Vector3.up * speed);
-         Debug.Log("Yes");
+            elevator.Translate(Vector3.up * speed * Time.deltaTime);
+            Debug.Log("Yes");
+        }
+        else
+        {
+
         }
     }
 

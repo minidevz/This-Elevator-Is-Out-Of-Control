@@ -25,4 +25,11 @@ public class DialogueTriggers : MonoBehaviour
        
 
     }
+    private void OnTriggerExit (Collider other)
+    {
+        if(other.tag == "Player")
+        {
+            this.GetComponent<Collider>().enabled = false;
+        }
+    }
 }

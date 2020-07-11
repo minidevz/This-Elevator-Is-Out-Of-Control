@@ -24,6 +24,7 @@ public class ElevatorOpener : MonoBehaviour
         {
             events = DoorEvents.PlayerDetected;
             openDoorSound.Play();
+            Debug.Log("Playing");
             if(this.GetComponent<DialogueIncrement>() != null)
             {
                 this.GetComponent<DialogueIncrement>().IncrementDialogue();
