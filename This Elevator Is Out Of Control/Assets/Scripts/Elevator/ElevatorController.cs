@@ -14,11 +14,12 @@ public class ElevatorController : MonoBehaviour
     private Vector3 currentLevel;
     public Transform[] levels;
     public Transform elevator;
+    private AudioSource elevatorMusic;
     #endregion
     void Start()
     {
         startLevel = transform.position;
-        Debug.Log(startLevel);
+        elevatorMusic = GetComponent<AudioSource>();
     }
 
     void Update ( )
@@ -26,12 +27,9 @@ public class ElevatorController : MonoBehaviour
         if(onElevator == true)
         {
             elevator.Translate(Vector3.up * speed * Time.deltaTime);
-            Debug.Log("Yes");
-        }
-        else
-        {
 
         }
+     
     }
 
     private void OnTriggerEnter (Collider other)
@@ -41,6 +39,7 @@ public class ElevatorController : MonoBehaviour
             
             onElevator = true;
             other.transform.SetParent(elevator);
+            elevatorMusic.Play();
         }
     }
     private void OnTriggerExit (Collider other)
@@ -49,6 +48,16 @@ public class ElevatorController : MonoBehaviour
         {
             onElevator = false;
             other.transform.SetParent(null);
+            elevatorMusic.Stop();
+        }
+    }
+
+    private void OnTriggerStay (Collider other)
+    {
+        if(other.tag == "Player")
+        {
+            Debug.Log("Music");
+          
         }
     }
 }

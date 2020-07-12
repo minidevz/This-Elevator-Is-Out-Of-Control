@@ -156,7 +156,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a501c6a603514184480009dfecdb5d5a, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -255,17 +255,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerCam: {fileID: 6047881442661061692}
   orientation: {fileID: 6047881444564971839}
-  moveSpeed: 2000
-  maxSpeed: 5
+  moveSpeed: 2250
+  maxSpeed: 7
   grounded: 0
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
   counterMovement: 0.175
-  maxSlopeAngle: 35
+  maxSlopeAngle: 45
   slideForce: 0
   slideCounterMovement: 0.2
-  jumpForce: 200
+  jumpForce: 250
   walking: {fileID: 8810353591032045260}
 --- !u!23 &6047881443607797705
 MeshRenderer:

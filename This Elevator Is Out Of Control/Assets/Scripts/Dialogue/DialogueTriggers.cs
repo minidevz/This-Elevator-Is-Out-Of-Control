@@ -18,7 +18,7 @@ public class DialogueTriggers : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            Debug.Log(gameObject.name);
+
             this.GetComponent<DialogueIncrement>().IncrementDialogue();
         }
      

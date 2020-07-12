@@ -43,7 +43,7 @@ public class ElevatorOpenController : MonoBehaviour
                     openDoor = false;
                 }
             }
-            Debug.Log(openDoor);
+         
         }
 
         doorAnimator.SetBool("openDoor", openDoor);
