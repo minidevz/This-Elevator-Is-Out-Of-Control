@@ -25,6 +25,7 @@ public class DialogueManager : MonoBehaviour
         currentDialogue = dialogues[index];
 
         dialogueText.text = currentDialogue.dialogueMessage;
+        dialogueText.color = currentDialogue.textColor;
     }
 
   

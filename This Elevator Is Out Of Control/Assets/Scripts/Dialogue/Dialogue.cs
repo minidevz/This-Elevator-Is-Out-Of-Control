@@ -9,8 +9,7 @@ public class Dialogue
     #region Variables
     [Multiline(3)]
     public string dialogueMessage;
-    public float messageDuration;
-    public bool consecutiveMessage;
+    public Color textColor;
 
     #endregion
  
