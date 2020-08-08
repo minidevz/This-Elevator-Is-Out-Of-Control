@@ -40,8 +40,5 @@ public class DatabaseDestroyer : MonoBehaviour
             this.enabled = false;
         }
     }
-    private void OnDisable ( )
-    {
-        this.GetComponent<DialogueIncrement>().IncrementDialogue();
-    }
+
 }

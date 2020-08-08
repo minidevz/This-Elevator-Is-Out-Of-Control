@@ -23,6 +23,7 @@ public class ElevatorStopper : MonoBehaviour
         } else
         {
             elevatorController.gameObject.GetComponent<Collider>().enabled = true;
+            this.GetComponent<DialogueIncrement>().IncrementDialogue();
         }
     }
 
